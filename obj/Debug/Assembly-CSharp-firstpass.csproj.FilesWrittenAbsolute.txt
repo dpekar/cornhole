@@ -1,0 +1,17 @@
+/Users/dpekar/Code/Cornhole/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/dpekar/Code/Cornhole/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
+/Users/dpekar/Code/Cornhole/obj/Debug/Assembly-CSharp-firstpass.dll
+/Users/dpekar/Code/Cornhole/obj/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/dpekar/Code/Cornhole/Temp/bin/Debug/UnityEngine.dll
+/Users/dpekar/Code/Cornhole/Temp/bin/Debug/UnityEditor.dll
+/Users/dpekar/Code/Cornhole/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/dpekar/Code/Cornhole/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/dpekar/Code/Cornhole/Temp/bin/Debug/Mono.Cecil.dll
+/Users/dpekar/Code/Cornhole/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/dpekar/Code/Cornhole/Temp/bin/Debug/Unity.DataContract.dll
+/Users/dpekar/Code/Cornhole/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/dpekar/Code/Cornhole/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/dpekar/Code/Cornhole/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/dpekar/Code/Cornhole/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/dpekar/Code/Cornhole/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/dpekar/Code/Cornhole/Temp/bin/Debug/Mono.Cecil.Mdb.dll
