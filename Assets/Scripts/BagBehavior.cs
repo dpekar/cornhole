@@ -28,9 +28,9 @@ public class BagBehavior : MonoBehaviour {
 			bag.useGravity = true;
 			bag.isKinematic = false;
 
-			Vector3 movement = new Vector3 (0.0f, 1.0f, -1.0f);
+			Vector3 movement = new Vector3 (0.0f, 1.0f, 1.0f);
 
-			bag.AddForce (movement * speed * slider.value);	
+			bag.AddRelativeForce (movement * speed * slider.value);	
 			notYetThrown = false;
 			bag.transform.parent = null;
 

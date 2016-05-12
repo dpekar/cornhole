@@ -63,11 +63,11 @@ public class GameManager : MonoBehaviour {
 		SceneManager.LoadScene (currentScene.name);
 	}
 
-	void PositionBag() {
-			
+	void PositionBag() {			
 		// Position of bag in hang in front of you 
 		if(currentBag != null && bagInHand) {
 			currentBag.transform.position = cameraObj.transform.position;
+			currentBag.transform.rotation = cameraObj.transform.rotation;
 			currentBag.transform.Translate (new Vector3 (0f, -0.2f, 0.7f));
 			currentBag.transform.parent = cameraObj.transform;
 		}
@@ -75,8 +75,9 @@ public class GameManager : MonoBehaviour {
 
 	void ThrowBag() {
 		if (Input.GetButton("Fire1") && bagInHand) {
-			bagInHand = false;
-
+			bagInHand = false;		
+			currentBag.transform.parent = null;
+				
 			BagBehavior bb = currentBag.GetComponent<BagBehavior> ();
 			bb.Throw ();
 			onBag++;
