@@ -27,13 +27,16 @@ public class BagBehavior : MonoBehaviour {
 		if (notYetThrown) {
 			bag.useGravity = true;
 			bag.isKinematic = false;
-
-			Vector3 movement = new Vector3 (0.0f, 1.0f, 1.0f);
-
-			bag.AddRelativeForce (movement * speed * slider.value);	
-			notYetThrown = false;
 			bag.transform.parent = null;
 
+			Debug.Log ("mass: " + bag.mass.ToString());
+
+			Vector3 movement = new Vector3 (0f, 100.0f, 100.0f);
+			//movement = movement * speed * slider.value;
+			Debug.Log ("relative force: " + movement.ToString());
+
+			bag.AddRelativeForce (movement);	
+			notYetThrown = false;
 		}
 	}
 }
