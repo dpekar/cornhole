@@ -9,6 +9,7 @@ public class CountPoints : MonoBehaviour {
 	private List<Collider> bagsOnBoard = new List<Collider>();
 	private int onBoard = 1;
 	private int inHoleBonus = 2;
+	private Rigidbody rb;
 
 	// Use this for initialization
 	void Start () {
@@ -17,9 +18,12 @@ public class CountPoints : MonoBehaviour {
 	void FixedUpdate () {
 		int score = 0;
 		foreach (Collider bag in bagsOnBoard) {
-			score += onBoard;
-			if (this.gameObject.name == "BullseyeTrigger")
-				score += inHoleBonus;
+			rb = bag.GetComponent<Rigidbody> ();
+			if(rb.IsSleeping()) {
+				score += onBoard;
+				if (this.gameObject.name == "BullseyeTrigger")
+					score += inHoleBonus;
+			}
 		}	
 		gm.UpdateScore (score, this.gameObject.name);
 	}
