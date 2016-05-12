@@ -67,11 +67,9 @@ public class GameManager : MonoBehaviour {
 			
 		// Position of bag in hang in front of you 
 		if(currentBag != null && bagInHand) {
+			currentBag.transform.position = cameraObj.transform.position;
+			currentBag.transform.Translate (new Vector3 (0f, -0.2f, 0.7f));
 			currentBag.transform.parent = cameraObj.transform;
-
-//			currentBag.transform.position = cameraObj.transform.position;
-//			currentBag.transform.position += new Vector3(0.0f, -0.5f, -1.0f);
-//			currentBag.transform.rotation = Quaternion.Euler(10, 0, 0);
 		}
 	}
 
