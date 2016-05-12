@@ -29,7 +29,7 @@ public class BagBehavior : MonoBehaviour {
 	void FixedUpdate() {
 		velocityMagnitude = bag.velocity.magnitude;
 		if (velocityMagnitude > 0.01/*dragMagnitudeThresholdLow*/ && velocityMagnitude < 1/*dragMagnitudeThresholdHigh*/) {			
-			Vector3 reverseForce = rollingDrag * -bag.velocity.normalized;
+			Vector3 reverseForce = rollingDrag * -bag.velocity.normalized * 2;
 			reverseForceMagnitude = reverseForce.magnitude;
 			bag.AddForce (reverseForce);
 		}

@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	void Update() {
-		if (Input.GetKeyDown ("r")) {
+		if (Input.GetKeyDown ("z")) {
 			Reset ();
 		}
 	}
@@ -91,8 +91,6 @@ public class GameManager : MonoBehaviour {
 			GrabNextBag ();
 		}
 	}
-
-
 
 
 
