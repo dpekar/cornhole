@@ -28,7 +28,19 @@ public class BagBehavior : MonoBehaviour {
 
 	void FixedUpdate() {
 		velocityMagnitude = bag.velocity.magnitude;
-		if (velocityMagnitude > 0.01/*dragMagnitudeThresholdLow*/ && velocityMagnitude < 1/*dragMagnitudeThresholdHigh*/) {			
+
+		if (velocityMagnitude > 15) {
+			bag.isKinematic = true;
+			bag.useGravity = false;
+		}
+
+		if (velocityMagnitude <= 0.05) {
+			bag.velocity =  Vector3.zero;
+			bag.Sleep ();
+		}
+
+
+		if (velocityMagnitude > 0.5/*dragMagnitudeThresholdLow*/ && velocityMagnitude < 1/*dragMagnitudeThresholdHigh*/) {			
 			Vector3 reverseForce = rollingDrag * -bag.velocity.normalized * 2;
 			reverseForceMagnitude = reverseForce.magnitude;
 			bag.AddForce (reverseForce);

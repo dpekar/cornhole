@@ -5,19 +5,23 @@ using System.Collections;
 public class SliderTimer : MonoBehaviour {
 
 	private Slider slider;
-	private int sliderDirection = 1;
+	//private int sliderDirection = 1;
 
 	void Start() {
 		slider = GetComponent <Slider> ();
-
-		slider.value = slider.minValue;
 	}
 
 	void Update() {
-		slider.value += .01f * sliderDirection ; 
 
-		if (slider.value == slider.maxValue || slider.value == slider.minValue) {
-			sliderDirection *= -1;
+		if (Input.GetKeyDown("g")) {
+			slider.value += .05f;
+		} else if (Input.GetKeyDown("p")) {
+			slider.value -= .05f;
 		}
+
+		// slider.value += .01f * sliderDirection ; 
+//		if (slider.value == slider.maxValue || slider.value == slider.minValue) {
+//			sliderDirection *= -1;
+//		}
 	}
 }

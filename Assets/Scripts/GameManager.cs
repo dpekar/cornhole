@@ -87,6 +87,8 @@ public class GameManager : MonoBehaviour {
 	void PickupBagIfReady() {
 		bool readyForNextBag = Input.GetButton ("Fire2") && !bagInHand && currentBag.GetComponent<Rigidbody> ().IsSleeping ();
 
+		if(currentBag != null) 		Debug.Log ("Ready: " + currentBag.GetComponent<Rigidbody> ().IsSleeping ());
+
 		if (readyForNextBag) {
 			GrabNextBag ();
 		}
