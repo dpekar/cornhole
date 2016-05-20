@@ -10,7 +10,7 @@ public class PlayerManager : MonoBehaviour {
 	private Camera cam;
 	private int onBag = 0;
 	private GameObject currentBag;
-
+	private bool done = false;
 
 	void Start () {
 		cam = GetComponent<Camera> ();
@@ -25,8 +25,9 @@ public class PlayerManager : MonoBehaviour {
 			currentBag.transform.SetParent (cam.transform);
 
 			bagInHand = true;
-		} else {
+		} else if (!done) {
 			GameManager.instance.PlayerDone();
+			done = true;
 		}
 
 	}

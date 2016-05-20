@@ -27,7 +27,7 @@ public class BagBehavior : MonoBehaviour {
 			rolling = true;
 		}
 
-		if (velocityMagnitude > 15) {
+		if (velocityMagnitude > 40) {
 			bag.isKinematic = true;
 			bag.useGravity = false;
 		}
@@ -57,7 +57,6 @@ public class BagBehavior : MonoBehaviour {
 		bag = GetComponent<Rigidbody> ();
 
 		if (notYetThrown) {
-			Debug.Log ("Throwing");
 			bag.useGravity = true;
 			bag.isKinematic = false;
 			bag.transform.parent = null;

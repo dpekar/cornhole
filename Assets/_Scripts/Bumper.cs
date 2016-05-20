@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Bumper : MonoBehaviour {
 
-	public float bumpIntensity = 5f;
+	public float bumpIntensity = 3f;
 
 	// Use this for initialization
 	void Start () {
@@ -13,7 +13,6 @@ public class Bumper : MonoBehaviour {
 
 	void OnCollisionExit (Collision info) {
 		Rigidbody bag = info.rigidbody;
-		Debug.Log ("Hit a bumper");
 		bag.velocity = bag.velocity * bumpIntensity;
 	}
 }

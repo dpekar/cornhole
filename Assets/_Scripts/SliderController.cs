@@ -4,23 +4,23 @@ using System.Collections;
 
 public class SliderController : MonoBehaviour {
 
-	public float increment;
-
 	private Slider slider;
+	private float numIncrements = 50f;
 	private float range;
+	private float increment;
 
 	void Start() {
 		slider = GetComponent <Slider> ();
 		range = slider.maxValue - slider.minValue;
+		increment = range / numIncrements;
 	}
 
-	void Update() {
+	void FixedUpdate() {		
 
-		if (Input.GetKeyDown("g")) {
-			
-			slider.value += range * increment;
-		} else if (Input.GetKeyDown("p")) {
-			slider.value -= range * increment;
+		if (Input.GetAxis("Mouse ScrollWheel") > 0.0f) {
+			slider.value += increment;
+		} else if (Input.GetAxis("Mouse ScrollWheel") < 0.0f ) {
+			slider.value -= increment;
 		}
 	}
 }

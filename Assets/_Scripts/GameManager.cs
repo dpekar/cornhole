@@ -6,13 +6,19 @@ using System.Collections;
 public class GameManager : MonoBehaviour {
 
 	public static GameManager instance;
+	public GameObject panelPrefab;
+	public Canvas canvPrefab;
 	public int numBags;
 
 	// Links to other game objects
-	public Text scoreText;
 	public Slider slider;
-	public GameObject panel; 
 
+	private Canvas canv;
+	private GameObject donePanel;
+	private Text scoreText;
+
+	private int boardScore = 0;
+	private int bullseyeScore = 0;
 
 	void Awake() {
 		if (instance == null) {
@@ -20,17 +26,26 @@ public class GameManager : MonoBehaviour {
 		} else if (instance != this) {
 			Destroy (gameObject);
 		}
+
+		canv = Instantiate (canvPrefab, Vector3.zero, Quaternion.identity) as Canvas;
+		scoreText = canv.transform.FindChild("ScoreText").gameObject.GetComponent<Text>();
+
 		DontDestroyOnLoad (gameObject);
+		DontDestroyOnLoad (canv);
 	}
 
 
 	void Update() {
 		if (Input.GetKeyDown ("z")) {
 			Reset ();
+			if (donePanel != null)
+				Destroy (donePanel);
 		}
 
 		if (Input.GetKeyDown ("x")) {
 			NextLevel ();
+			if (donePanel != null)
+				Destroy (donePanel);
 		}
 
 	}
@@ -46,21 +61,21 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void PlayerDone() {
-		
+		donePanel = Instantiate (panelPrefab, Vector3.zero, Quaternion.identity) as GameObject;
+		donePanel.transform.SetParent (canv.transform, false);
 	}
 
 
 	public void UpdateScore(int newScore, string scoreType) {
 
-		int boardScore = 0;
-		int holeScore = 0;
-
 		if (scoreType == "BoardScoreTrigger")
 			boardScore = newScore;
-		if (scoreType == "BullseyeTrigger")
-			holeScore = newScore;
+		else if (scoreType == "BullseyeTrigger")
+			bullseyeScore = newScore;
 		
-		scoreText.text = "Score " + (boardScore + holeScore);
+		scoreText.text = "Score " + (boardScore + bullseyeScore);
 	}
 
 }
+
+
