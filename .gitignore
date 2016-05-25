@@ -40,3 +40,35 @@ Assembly-CSharp-Editor.dll
 Assembly-CSharp-Editor.dll.mdb
 Assembly-CSharp.dll
 Assembly-CSharp.dll.mdb
+EndPanel.prefab
+EndPanel.prefab.meta
+FirstPersonCharacter.prefab
+FirstPersonCharacter.prefab.meta
+FPSController.prefab
+FPSController.prefab.meta
+GameManager.prefab
+PlayerManager.prefab
+Results.prefab
+Results.prefab.meta
+UI Canvas.prefab
+UI Canvas.prefab.meta
+Cornhole.userprefs
+CurrentLayout.dwlt
+CurrentMaximizeLayout.dwlt
+expandedItems
+InspectorExpandedItems.asset
+LastSceneManagerSetup.txt
+00000000000000002000000000000000
+00000000000000004000000000000000
+00000000000000006100000000000000
+0000000000000000b000000000000000
+5e9e851c0e142814dac026a256ba2ac0
+5e9e851c0e142814dac026a256ba2ac0.info
+75adaae118968451c88bb2eb291b387c
+d9359a5e81a1945afbdad7ab03243bb9
+fda1ecff304db4bce86b0197642df7d0
+ProjectSettings.asset
+Assembly-CSharp-firstpass.dll
+Assembly-CSharp-firstpass.dll.mdb
+EditorBuildSettings.asset
+InputManager.asset

@@ -1,10 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/AddForce.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scripts/GameManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/BagBehavior.cs" Line="26" Column="23" />
-      <File FileName="Assets/FarlandSkies/Demo/Scripts/Player/SmoothMouseLook.cs" Line="35" Column="6" />
-      <File FileName="Assets/AddForce.cs" Line="9" Column="35" />
+      <File FileName="Assets/_Scripts/GameManager.cs" Line="49" Column="1" />
+      <File FileName="Assets/PlayerManager.cs" Line="22" Column="85" />
+      <File FileName="Assets/_Scripts/BagBehavior.cs" Line="60" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

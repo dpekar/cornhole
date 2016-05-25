@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Asset Store/Jurassic Pack/-Demo/WORLD.unity
+- path: Assets/_Scenes/basic.unity
   isLoaded: 1
   isActive: 1
